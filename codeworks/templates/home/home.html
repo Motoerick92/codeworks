@@ -1,0 +1,249 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="csrf-token" content="{{ csrf_token }}">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>  
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="{% static 'styles/styles.css' %}" />  
+  <title>Code Works</title>
+</head>
+<body>
+<!-- Header responsivo -->
+ {% comment %} <header>
+
+
+ </header> {% endcomment %}
+ <section>
+  <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <div class="container d-flex justify-content-between align-items-center">
+      <!-- Botón de menú para dispositivos pequeños -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+    <!-- Menú de navegación -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="#servicios">Servicios</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contacto">Contacto</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#sobre-nosotros">Sobre Nosotros</a>
+        </li>
+      </ul>
+    </div>
+
+         <!-- Logo a la derecha -->
+         <div class="navbar-brand ms-auto">
+          <img src="{% static 'img/CW_Animated-R.gif' %}" alt="CodeWorks Logo" class="img-fluid" style="height: 100px; width: 282px;">
+        </div>
+      </div>
+  </nav>
+</section>
+
+
+  <div class="separator"></div>
+
+
+  <div id="chatbot" class="chatbot-container border rounded shadow"
+   style="bottom: 20px; right: 20px;">
+    <div class="chat-header d-flex justify-content-between align-items-center p-2" style="cursor: move;">
+        <span>Chatbot</span>
+        <button class="btn btn-sm btn-light" type="button" data-bs-toggle="collapse" data-bs-target="#chatContent" aria-expanded="true" aria-controls="chatContent">-</button>
+    </div>
+    <div id="chatContent" class="collapse show">
+        <div class="chat-body p-2" id="chatBody" style="max-height: 250px; overflow-y: auto;">
+            <div class="bot-message">Hola, soy tu asistente virtual. ¿En qué puedo ayudarte?</div>
+        </div>
+        <div class="chat-footer p-2 d-flex gap-2" id="chatFooter">
+            <input type="text" id="userInput" class="form-control" placeholder="Escribe tu mensaje aquí..." />
+            <button id="sendBtn" class="btn btn-primary">Enviar</button>
+        </div>
+    </div>
+</div>
+
+<script src="{% static 'js/chatbot.js' %}"></script>
+
+
+
+  <section id="inicio" class="hero">
+    <div class="container">
+        <!-- Primer grid: Texto -->
+        <div class="text-content text-lg-start mb-4 mb-lg-0">
+            <h2>Transforma Tu Negocio</h2>
+            <p>Ofrecemos soluciones personalizadas de desarrollo de software para empresas innovadoras donde la innovación y la tecnología se encuentran para ofrecer soluciones efectivas y eficientes.</p>
+            <a href="#contacto" class="btn">Contáctanos</a>
+        </div>
+
+         <!-- Segundo grid: Texto -->
+          <div class="carousel-size">
+         <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleInterval" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleInterval" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleInterval" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="5000">
+              <img src="{% static 'img/parallax06_36HQHu7h.webp' %}" class="d-block w-100" alt="...">
+              <div class="carousel-caption d-none d-md-block">                
+                <h3>Software de Gestión Empresarial.</h3>
+              </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="5000">
+              <img src="{% static 'img/product06_36HQHu7h.webp' %}" class="d-block w-100" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                <h3>Automatización Empresarial a Medida.</h3>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="{% static 'img/product04_36HQHu7h.webp' %}" class="d-block w-100" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                <h3>Software Innovador para Crecimiento Empresarial.</h3>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+
+        <div class="hero-image"></div>
+
+    </div>
+</section>
+
+
+
+<section id="servicios" class="services">
+  <div class="container">
+      <h2 class="slide-in-title">Nuestros Servicios</h2>
+
+      <div class="service-cards">
+
+          <div class="service-card">
+            <img src="{% static 'img/vertical02_36HQHu7h.webp' %}" class="d-block w-100" alt="...">
+              <div class="service-text">
+                <h3>Desarrollo Web</h3>
+                <p>Desarrollamos sitios web modernos, rápidos y personalizados.</p>
+              </div>
+          </div>
+
+          <div class="service-card">
+            <img src="{% static 'img/product06_36HQHu7h.webp' %}" class="d-block w-100" alt="...">
+            <div class="service-text">
+              <h3>Aplicaciones Móviles</h3>
+              <p>Aplicaciones nativas y multiplataforma para Android y iOS.</p>
+            </div>
+          </div>
+
+          <div class="service-card">
+            <img src="{% static 'img/product04_36HQHu7h.webp' %}" class="d-block w-100" alt="...">
+            <div class="service-text">
+              <h3>Soluciones en la Nube</h3>
+              <p>Optimiza tu negocio con nuestras soluciones cloud.</p>
+            </div>
+          </div>
+      </div>      
+  </div>
+</section>
+
+
+
+  <section id="sobre-nosotros" class="about-us">
+    <div class="container">
+      <h2><span>Sobre Nosotros</span></h2>
+      <p><span>Somos un equipo de expertos en tecnología con más de 10 años de experiencia. Nos especializamos en desarrollo de software a medida y brindamos soluciones que mejoran la eficiencia y el rendimiento de las empresas.</span></p>
+    </div>
+  </section>
+
+
+
+  <section>
+    <div class="presentation-video">
+      <div class="ratio ratio-16x9 rounded-video">
+        <iframe width="1280" height="720" src="https://www.youtube.com/embed/HnNL5qg3Gts" 
+                title="Mujer montana en el campo 👩 [Video de dominio Público] No Copyright Video 🔥" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" 
+                allowfullscreen>
+        </iframe>
+      </div>
+    </div>    
+  </section>
+  
+  
+  <section id="contacto" class="contact">
+    <div class="container">
+        <h2>Contacto</h2>                
+       
+
+        <form id="contactForm">
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Mensaje:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit" class="btn">Enviar</button>
+        </form>      
+        
+    </div>
+</section>
+<script src="{% static 'js/emeal.js' %}"></script>
+
+
+  <footer>
+    <div class="f-container justify-content-between align-items-center">
+      <p class="mb-0">&copy; 2024 Code Works. Todos los derechos reservados.</p>
+      <div>
+        <!-- Ícono de Facebook -->
+        <a href="https://www.facebook.com/profile.php?id=61566364603998" target="_blank" class="text-decoration-none me-3">
+          <i class="fab fa-facebook fa-lg" style="color: #4267B2;"></i>
+        </a>
+        <!-- Ícono de WhatsApp -->
+        <a href="https://wa.me/3781172225" target="_blank" class="text-decoration-none">
+          <i class="fab fa-whatsapp fa-lg" style="color: #25D366;"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+  
+   
+</body>
+</html>
+
+
+<!-- Modal de notificación -->
+<div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="successModalLabel">Éxito</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Correo enviado exitosamente, nuestro equipo se pondra en contacto contigo.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Aceptar</button>
+      </div>
+    </div>
+  </div>
+</div>

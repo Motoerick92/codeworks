@@ -1,0 +1,592 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+/* Reset y Estilos Base */
+* {
+  
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;  
+}
+
+.container {  
+  width: 100%;
+  max-width: none; 
+  padding: 0;
+  color: white;
+}
+
+/* Navbar */
+
+.navbar {  
+  /* background-image: radial-gradient(#ffffff, #ffffff, #000000); */
+  background-image: radial-gradient(#000000, #000000, #000000, #3cd6eb);  
+}
+
+.nav-link {
+  color: white;
+}
+
+.nav-link:hover {
+  color: #3cd6eb;
+}
+
+
+.hero {
+  /* background-image: radial-gradient(#ffffff, #ffffff, #ffffff, #000000); */
+  background-image: radial-gradient(#000000, #000000, #000000, #3cd6eb);
+  color: white;
+}
+.about-us {
+  /* background-image: radial-gradient(#ffffff, #ffffff, #000000); */
+  background-image: radial-gradient(#000000, #000000, #000000, #3cd6eb);
+}
+
+.services {
+  text-align: center;
+  background-image: radial-gradient(#000000, #000000, #000000, #3cd6eb);
+  /* background-image: radial-gradient(#ffffff, #ffffff, #ffffff, #000000); */
+}
+
+.contact {
+  background-image: radial-gradient(#000000, #000000, #000000, #3cd6eb);
+  /* background-image: radial-gradient(#ffffff, #ffffff, #000000); */
+}
+
+.presentation-video {
+  padding: 100px;  
+  background-image: radial-gradient(#000000, #000000, #000000, #3cd6eb);
+  /* background-image: radial-gradient(#ffffff, #ffffff, #ffffff, #000000); */
+}
+
+.modal-content {
+  background-image: radial-gradient(#000000, #3cd6eb);
+  color: white;
+  text-align: center;
+}
+
+/* Chatbot */
+.chatbot-container {
+  position: fixed;
+  /* bottom: 20px; */
+  right: 20px;
+  width: 300px;
+  /* max-height: 400px; */
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-image: radial-gradient(#000000, #000000, #000000, #3cd6eb);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+}
+
+.chat-header {
+  background-image: radial-gradient(#000000, #000000, #000000, #3cd6eb);
+  color: #fff;
+  padding: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  text-align: center;
+}
+
+.chat-body {
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
+}
+
+.chat-footer {
+  display: flex;
+  padding: 10px;
+  border-top: 1px solid #ccc;
+}
+
+.chat-footer input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+  background-image: radial-gradient(#ffffff, #ffffff, #ffffff, #3cd6eb);
+}
+
+.chat-footer button {
+  padding: 10px 20px;
+  background-color: rgb(58, 91, 204);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.chat-footer button:hover {
+  background-color: #0056b3;
+}
+
+
+
+body {  
+  line-height: 1.6;
+  background-color: #f4f4f4;
+}
+
+.navbar-brand h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-left: auto;
+}
+
+.navbar-nav {
+  display: flex;  
+  gap: 20px;
+  position: relative;
+  margin-left: 30px;
+}
+
+/* Header para Todas las Pantallas */
+header {
+  width: 100%;
+  height: 100px;
+  align-content: center;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  position: relative;
+  width: 100%;
+}
+
+.header-container h1 {
+  font-size: 2rem;
+  margin: 0;  
+}
+
+.header-container nav ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  flex-wrap: nowrap;
+}
+
+.header-container nav ul li {
+  margin-right: 25px;
+}
+
+.header-container nav ul li a {
+  color: black;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+/* Separador */
+.separator {
+  width: 100%;
+  height: 1px;
+  background-color: #000;
+  margin: 0;  
+}
+
+.text-content {
+  padding: 0px 75px;
+  grid-column: 1;  
+  z-index: 1;
+}
+
+.hero {
+  height: 100%;
+  width: 100%;
+  display: flex;  
+  position: relative;  
+}
+
+.hero .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+  height: 700px;
+}
+
+.carousel {
+  grid-column: 2;  
+  align-content: center;
+  width: 400px;
+  z-index: 1;
+  background-color: transparent;
+  border-radius: 16px;
+  box-shadow: 0px 0px 13px 2px #3cd6eb
+}
+
+.carousel-size {
+  grid-column: 2;
+  justify-items: center;  
+  background-color: transparent;
+}
+
+.carousel-item img {
+  filter: brightness(0.7);  
+  border-radius: 16px;
+  background-color: transparent;
+}
+
+.carousel-inner {
+  border-radius: 16px;
+}
+
+.carousel-caption h3 {
+  animation: slideUp 1s ease-in-out forwards;
+  font-size: 2.3rem;
+  font-weight: bold;
+}
+
+.hero-image {
+  grid-column: 3;
+  background: url("../img/vertical04_36HQHu7h.webp") no-repeat center center;
+  background-size: cover;
+  height: 99.8%;
+  width: 50%;
+  max-width: 100%;
+  position: absolute;
+  margin-left: auto;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 0;
+  border-radius: 16px;
+  box-shadow: 0px 0px 0px 2px #3cd6eb;
+}
+
+.hero h2 {
+  width: 80%;
+  font-size: 3.0rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.hero p {
+  width: 80%;
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+
+/* Botón */
+.btn {
+  background-color: rgb(58, 91, 204);
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background-color: rgb(36, 58, 128);
+  color: #fff;
+}
+
+/* Servicios, Sobre Nosotros y Contacto */
+.services, .about-us, .contact {
+  padding: 50px 0;
+  background-color: #fff;
+}
+
+ .about-us h2 {  
+  font-weight: bold;
+  font-size: 3.0rem;
+}
+
+.service-cards {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  position: relative;
+  overflow: hidden;
+  padding: 20px;
+}
+
+.service-card {
+  background-color: transparent;
+  width: 30%;
+  text-align: center;
+  border-radius: 16px;
+  box-shadow: 0px 0px 13px 2px #3cd6eb  
+}
+
+.service-card h3 {
+  margin-bottom: 15px;
+}
+
+.w-100 {  
+  border-radius: 16px;
+}
+
+.service-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7); /* Fondo semitransparente */
+  color: #fff;
+  padding: 20px;
+  transform: translateY(100%); /* Mover el texto fuera de la vista */
+  transition: transform 0.5s ease;
+}
+
+.slide-in-title {
+  font-weight: bold;
+  font-size: 3rem;
+}
+
+.service-card:hover .service-text {
+  transform: translateY(0); /* Animar para que el texto suba */
+}
+
+/* section{
+  view-timeline: --scroll;
+} */
+
+/* .about-us p:first-child, .about-us h2:first-child {
+  animation: fade-away both linear;
+  animation-timeline: --scroll;
+  animation-range: exit 20% exit 90%;
+}
+
+.about-us p:last-child, .about-us h2:last-child {
+  animation: 
+    scale-up both ease-in-out,
+    fade-away both linear;
+  animation-timeline: --scroll;
+  animation-range: 
+    exit 0% exit 100%,
+    exit 50% exit 90%;
+} */
+
+.about-us p, .about-us h2 {
+  text-align: center;  
+  margin-top: 20px;
+  padding: 0px 15%;
+}
+
+.contact h2 {
+  text-align: center;
+}
+
+.contact form {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact label {
+  display: block;
+  margin: 10px 0 5px;
+}
+
+.contact input, .contact textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+/* Clase personalizada para el borde redondeado */
+.rounded-video iframe {
+  border-radius: 16px;
+  /* border: 2px solid #ccc; */
+  background-color: transparent;
+  box-shadow: 0px 0px 13px 2px #3cd6eb
+}
+
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+
+footer p {
+  margin: 0;
+}
+
+/*Animación up letras */
+@keyframes slideUp {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/*Animación sobre nosotros */
+/* @keyframes scale-up {
+  to { scale: 1.5; }
+}
+
+@keyframes fade-away {
+  to { opacity: 0;}
+} */
+
+
+footer .fab {
+  margin-left: 10px; /* Espaciado entre el texto y el ícono */
+  transition: transform 0.2s ease-in-out;
+}
+
+footer .fab:hover {
+  transform: scale(1.2); /* Agrandar el ícono al pasar el cursor */
+}
+
+/* .f-container {
+  
+} */
+
+
+
+  @media (max-width: 855.98px) {
+
+  .header-container h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+    height: 100%;
+    margin-bottom: 40px;
+  }
+  
+  .text-content, .carousel-size {
+    grid-column: 1;
+    margin-left: 0;
+  }
+
+  .hero h2 {
+    font-size: 2.5rem;
+    width: 100%;
+    padding: 10px;
+    margin-top: 25px;
+  }
+
+  .hero p {
+    font-size: 1rem;
+    width: 100%;    
+  }
+
+  .hero-image {
+    display: none;
+  } 
+
+  .d-none {
+    display: flex !important;
+  }
+
+  /* Servicios, Sobre Nosotros y Contacto */
+  .services, .about-us, .contact {    
+    padding: 10px 10px;    
+  }
+
+  .slide-in-title {
+    margin-top: 25px;
+  }
+
+  .service-cards {
+    justify-content: center;
+    padding: 0px;
+  }
+
+  .service-card {
+    width: 80%;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 15px;
+    margin-top: 15px;
+  }
+
+  .service-card img {
+    width: 100%;
+    display: block;
+  }
+
+  .service-text {
+    position: absolute;    
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    width: auto;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: none; 
+    transform: none;
+
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  @keyframes show {
+    from {
+      opacity: 0;
+      scale: 25%;
+    }
+
+    to {
+      opacity: 1;
+      scale: 100%;
+    }
+  }
+
+  .service-text h3 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+  }
+
+  .service-text p {
+    font-size: 1rem;
+  }
+
+  .service-card:hover .service-text {
+    transform: none;
+  }
+
+  .presentation-video {
+    padding: 50px;      
+  }
+
+}
+
+
+
+@media (max-width: 420px) {
+  .carousel {
+    width: 100%;    
+  }
+}
+
+
+
+@media (max-width: 600px) {
+  .service-card {
+    padding: 0px;
+  }
+}
