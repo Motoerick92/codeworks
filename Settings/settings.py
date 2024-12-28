@@ -24,15 +24,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 #Deploy
 SECRET_KEY = os.environ.get('SECRET_KEY', default='your secret key')
-
-#Local
-# SECURITY WARNING: don't run with debug turned on in production!
-#DEBUG = True
-
-#Deploy
 DEBUG = 'RENDER' not in os.environ
 
-#Local
 ALLOWED_HOSTS = []
 
 RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
@@ -145,7 +138,6 @@ if not DEBUG:
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
-LOGIN_URL = '/home'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
