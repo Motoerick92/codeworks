@@ -536,7 +536,6 @@ footer .fab:hover {
     align-items: center;
     transition: none; 
     transform: none;
-
   }
 
   img {
@@ -577,10 +576,56 @@ footer .fab:hover {
 
 
 
-@media (max-width: 420px) {
+@media (max-width: 433px) {
+  .hero h2 {
+    font-size: 2rem;
+}
+
+.text-content {
+  padding: 0px;
+}
+
   .carousel {
-    width: 100%;    
+    width: 80%;
+    box-shadow: 0px 0px 8px 1px #3cd6eb;
   }
+
+  .carousel-caption h3 {
+    font-size: 1.5rem; 
+  }
+
+  .carousel-item img {
+    border-radius: 12px;
+  }
+
+  .carousel-inner {
+    border-radius: 12px;
+  }
+
+  .slide-in-title {    
+    font-size: 2.5rem;
+}
+
+  .service-text {
+    padding: 10px; /* Reduce el padding */
+    font-size: 0.9rem; /* Reduce el tamaño del texto */
+    width: 100%; /* Asegúrate de que el contenido no desborde */
+    border-radius: 5px; /* Reduce el borde redondeado */
+  }
+
+  .service-text h3 {    
+    font-size: 1.0rem;
+}
+
+  .service-text p {
+    font-size: 0.8rem;
+    margin-bottom: 0rem;
+}
+
+.presentation-video {
+  padding: 10px;
+}
+
 }
 
 

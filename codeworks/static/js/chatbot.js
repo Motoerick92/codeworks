@@ -74,3 +74,25 @@ document.addEventListener("mouseup", () => {
     document.body.style.userSelect = ""; // Reactiva la selección de texto
 });
 
+// Eventos para touch
+header.addEventListener("touchstart", (e) => {
+    const touch = e.touches[0];
+    isDragging = true;
+    offsetX = touch.clientX - chatbot.offsetLeft;
+    offsetY = touch.clientY - chatbot.offsetTop;
+    document.body.style.userSelect = "none"; // Desactiva la selección de texto
+});
+
+header.addEventListener("touchmove", (e) => {
+    if (!isDragging) return;
+    const touch = e.touches[0];
+    chatbot.style.left = `${touch.clientX - offsetX}px`;
+    chatbot.style.top = `${touch.clientY - offsetY}px`;
+    chatbot.style.bottom = ""; // Elimina la posición inferior para mover libremente
+    chatbot.style.right = "";  // Elimina la posición derecha para mover libremente
+});
+
+header.addEventListener("touchend", () => {
+    isDragging = false;
+    document.body.style.userSelect = ""; // Reactiva la selección de texto
+});
