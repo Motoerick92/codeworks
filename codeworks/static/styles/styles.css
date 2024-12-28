@@ -630,8 +630,8 @@ footer .fab:hover {
 
 
 
-@media (max-width: 600px) {
-  .service-card {
-    padding: 0px;
-  }
+@media (max-width: 640px) {
+
+}
+
 }
