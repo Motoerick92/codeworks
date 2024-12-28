@@ -85,12 +85,15 @@ header.addEventListener("touchstart", (e) => {
 
 header.addEventListener("touchmove", (e) => {
     if (!isDragging) return;
+
+    e.preventDefault();
+
     const touch = e.touches[0];
     chatbot.style.left = `${touch.clientX - offsetX}px`;
     chatbot.style.top = `${touch.clientY - offsetY}px`;
     chatbot.style.bottom = ""; // Elimina la posición inferior para mover libremente
     chatbot.style.right = "";  // Elimina la posición derecha para mover libremente
-});
+}, { passive: false }); // Habilita preventDefault() para touchmove
 
 header.addEventListener("touchend", () => {
     isDragging = false;
