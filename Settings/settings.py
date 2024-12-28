@@ -22,6 +22,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 
+#Local
+# SECURITY WARNING: don't run with debug turned on in production!
+# SECRET_KEY = 'django-insecure-5di#(nh%x0n14vxte!8@gpkz$qm3#pqfaut&@k9snef(rye*nc'
+# DEBUG = True
+
 #Deploy
 SECRET_KEY = os.environ.get('SECRET_KEY', default='your secret key')
 DEBUG = 'RENDER' not in os.environ
@@ -52,8 +57,7 @@ MIDDLEWARE = [
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'django.middleware.security.SecurityMiddleware',
+    'django.middleware.clickjacking.XFrameOptionsMiddleware',    
     'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
