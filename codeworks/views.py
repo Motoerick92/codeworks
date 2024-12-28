@@ -6,6 +6,7 @@ from unidecode import unidecode
 from django.core.mail import send_mail
 from django.views.decorators.csrf import csrf_exempt
 
+
 # Inicializar spaCy
 nlp = spacy.load("es_core_news_md")
 
